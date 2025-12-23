@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bratislava Christmas Countdown</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="snow" aria-hidden="true"></div>
+    <main class="countdown-app">
+      <header class="hero">
+        <p class="eyebrow">Bratislava · Slovakia</p>
+        <h1>Christmas Countdown to Dec 26, 3:25 PM</h1>
+        <p class="subhead">
+          The Old Town lights are glowing, the Danube is shimmering, and Bratislava is waiting for
+          the holiday moment.
+        </p>
+      </header>
+
+      <section class="countdown" aria-live="polite">
+        <div class="time-card">
+          <span class="time-value" id="days">00</span>
+          <span class="time-label">Days</span>
+        </div>
+        <div class="time-card">
+          <span class="time-value" id="hours">00</span>
+          <span class="time-label">Hours</span>
+        </div>
+        <div class="time-card">
+          <span class="time-value" id="minutes">00</span>
+          <span class="time-label">Minutes</span>
+        </div>
+        <div class="time-card">
+          <span class="time-value" id="seconds">00</span>
+          <span class="time-label">Seconds</span>
+        </div>
+      </section>
+
+      <section class="details">
+        <div>
+          <h2>Counting in Bratislava time</h2>
+          <p>
+            Target: <strong>December 26, 3:25 PM</strong> at Bratislava Castle.
+            <span id="target-time"></span>
+          </p>
+        </div>
+        <div class="banner">
+          <span>🎄</span>
+          <p>
+            Sip a warm punč, stroll the Christmas market, and watch the countdown tick down by the
+            snow-dusted Danube.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Veselé Vianoce from Bratislava!</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
