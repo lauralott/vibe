@@ -1,0 +1,165 @@
+:root {
+  color-scheme: light;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  --night: #0b1f35;
+  --deep-red: #7b0f1b;
+  --gold: #f7c948;
+  --pine: #1f6b4f;
+  --snow: #f6f3f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #12355b, var(--night));
+  color: var(--snow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 1.5rem 1.5rem;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.snow {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(var(--snow) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.18;
+  pointer-events: none;
+  animation: snowfall 25s linear infinite;
+}
+
+@keyframes snowfall {
+  from {
+    transform: translateY(-20%);
+  }
+  to {
+    transform: translateY(20%);
+  }
+}
+
+.countdown-app {
+  width: min(960px, 100%);
+  background: rgba(11, 31, 53, 0.7);
+  border: 1px solid rgba(247, 201, 72, 0.3);
+  border-radius: 28px;
+  padding: 2.5rem;
+  box-shadow: 0 30px 60px rgba(4, 9, 20, 0.45);
+  backdrop-filter: blur(6px);
+  position: relative;
+  z-index: 1;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.eyebrow {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  color: var(--gold);
+  margin-bottom: 0.6rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 0 0 0.5rem;
+}
+
+.subhead {
+  font-size: 1.05rem;
+  color: rgba(246, 243, 240, 0.8);
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.time-card {
+  background: linear-gradient(135deg, rgba(123, 15, 27, 0.8), rgba(31, 107, 79, 0.85));
+  border-radius: 20px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  box-shadow: inset 0 0 0 1px rgba(247, 201, 72, 0.2);
+}
+
+.time-value {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  display: block;
+  color: var(--snow);
+}
+
+.time-label {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: rgba(246, 243, 240, 0.8);
+}
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+
+.details h2 {
+  margin: 0 0 0.5rem;
+}
+
+.details p {
+  margin: 0;
+  color: rgba(246, 243, 240, 0.85);
+}
+
+#target-time {
+  display: inline-block;
+  margin-left: 0.5rem;
+  color: var(--gold);
+}
+
+.banner {
+  background: rgba(247, 201, 72, 0.15);
+  border-radius: 16px;
+  padding: 1.25rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  color: rgba(246, 243, 240, 0.9);
+}
+
+.banner span {
+  font-size: 1.8rem;
+}
+
+footer {
+  margin-top: 2rem;
+  color: rgba(246, 243, 240, 0.7);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .countdown-app {
+    padding: 2rem 1.5rem;
+  }
+
+  .banner {
+    flex-direction: column;
+  }
+}
